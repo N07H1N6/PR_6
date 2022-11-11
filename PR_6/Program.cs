@@ -1,5 +1,5 @@
 ﻿//********************************************************
-//*Практическая работа №5                                *
+//*Практическая работа №6                                *
 //* Выполнил:Кондаков.П.А,Группа 2ИСП                    *
 //*Задание:составить программу работы алгоритма ветвления*
 //********************************************************
@@ -15,7 +15,7 @@ namespace PR_5
             int x1,x2,y1,y2,AO,BO,x=0,y=0;// объявление переменных
             Console.WriteLine("Здравствуйте");
             Console.WriteLine("Практическая работа №5");
-            Console.Write("Введите две точки: \n");
+            Console.Write("Введите координаты двух точек: \n");
            try
            { 
             Console.Write("x1= ");//Ввод данных
@@ -30,7 +30,9 @@ namespace PR_5
 
             AO = (int)Math.Sqrt(Math.Pow(x1 - x, 2) + Math.Pow(y1 - y, 2));//расчет длины отрезка
             BO = (int)Math.Sqrt(Math.Pow(x2 - x, 2) + Math.Pow(y2 - y, 2));
+            Console.WriteLine("Длина отрезка AO:");
             Console.WriteLine(AO);
+            Console.WriteLine("Длина отрезка BO:");
             Console.WriteLine(BO);
             switch (AO < BO)
             {
@@ -54,6 +56,7 @@ namespace PR_5
            }      
             catch (Exception e)//обработка ошибок
             {
+                Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("Что-то пошло не так.Ошибка:" + e.Message);
             }
            
